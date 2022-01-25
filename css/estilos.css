@@ -1,0 +1,138 @@
+
+body{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background-color: #eeeeee;
+}
+header{
+    background-color: #cf2b2b;
+    position: fixed;
+    top: 0;
+    height: 92px;
+    width: 100%;
+    color: #ffffff;
+    padding-left: 21px;
+    padding-top: 8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+h1{
+    font-family: 'Righteous', cursive;
+    font-size: 44px;
+}
+h2{
+    line-height: 21px;
+    font-size: 18px;
+}
+main{
+    margin-left: 19px
+}
+.pratos{
+    margin-top: 123px;
+    margin-bottom: 27px;
+}
+.bebidas{
+    margin-bottom: 17px;
+}
+.sobremesa{
+    margin-bottom: 107px;;
+}
+.opcoes{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
+.pratos .opcao{
+    height: 216px;
+}
+.bebidas .opcao{
+    height: 202px;
+}
+.sobremesa .opcao{
+    height: 197px;
+}
+.opcao{
+    position: relative;
+    flex-shrink: 0;
+    width: 172px;
+    margin-right: 16px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+}
+/* .opcao:target{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
+} */
+.titulo{
+    font-family: 'Righteous', cursive;
+    font-size: 26px;
+    margin-bottom: 17px;
+}
+img{
+    position: absolute;
+    left: 14px;
+    top: 18px;
+}
+.nome-opcao{
+    position: absolute;
+    left: 15px;
+    top: 113px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333333;
+}
+.descricao{
+    position: absolute;
+    left: 15px;
+    top: 140px;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 17.58px;
+    color: #a6a6a6;
+}
+span{
+    position: absolute;
+    left: 15px;
+    bottom: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+}
+.icone{
+    display: none;
+    position: absolute;
+    bottom: 9.38%;
+    right: 9.38%;
+    font-size: 15px;
+    color: #32B72F;
+}
+footer{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+    height: 92px;
+    background-color: #ffffff;
+}
+footer div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 364px;
+    height: 61px;
+    border-radius: 50px;
+    font-size: 20px;
+    color: #ffffff;
+}
+.aberto{
+    background-color: #cbcbcb;
+    font-weight: 400;
+}
+.fechado{
+    font-weight: 700;
+    display: none;
+    background-color: #32b72f;
+}
