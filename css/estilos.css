@@ -60,9 +60,9 @@ main{
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
 }
-/* .opcao:target{
+.borda-verde{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
-} */
+}
 .titulo{
     font-family: 'Righteous', cursive;
     font-size: 26px;
@@ -99,12 +99,14 @@ span{
     color: #000000;
 }
 .icone{
-    display: none;
     position: absolute;
     bottom: 9.38%;
     right: 9.38%;
     font-size: 15px;
     color: #32B72F;
+}
+.icon-none{
+    display: none;    
 }
 footer{
     position: fixed;
