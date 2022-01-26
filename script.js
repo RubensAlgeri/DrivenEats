@@ -1,4 +1,80 @@
-function sele1(){
+function seleb1(){
+    var element = document.getElementById("b1");
+    element.classList.add("borda-verde");
+    var element = document.getElementById("b2");
+    element.classList.remove("borda-verde");
+    var element = document.getElementById("b3");
+    element.classList.remove("borda-verde");
+    var element = document.getElementById("b4");
+    element.classList.remove("borda-verde");
+
+    var element = document.getElementById("icon-b1");
+    element.classList.remove("icon-none");
+    var element = document.getElementById("icon-b2");
+    element.classList.add("icon-none");
+    var element = document.getElementById("icon-b3");
+    element.classList.add("icon-none");
+    var element = document.getElementById("icon-b4");
+    element.classList.add("icon-none");
+}
+function seleb2(){
+    var element = document.getElementById("b1");
+    element.classList.remove("borda-verde");
+    var element = document.getElementById("b2");
+    element.classList.add("borda-verde");
+    var element = document.getElementById("b3");
+    element.classList.remove("borda-verde");
+    var element = document.getElementById("b4");
+    element.classList.remove("borda-verde");
+
+    var element = document.getElementById("icon-b1");
+    element.classList.add("icon-none");
+    var element = document.getElementById("icon-b2");
+    element.classList.remove("icon-none");
+    var element = document.getElementById("icon-b3");
+    element.classList.add("icon-none");
+    var element = document.getElementById("icon-b4");
+    element.classList.add("icon-none");
+}
+function seleb3(){
+    var element = document.getElementById("b1");
+    element.classList.remove("borda-verde");
+    var element = document.getElementById("b2");
+    element.classList.remove("borda-verde");
+    var element = document.getElementById("b3");
+    element.classList.add("borda-verde");
+    var element = document.getElementById("b4");
+    element.classList.remove("borda-verde");
+
+    var element = document.getElementById("icon-b1");
+    element.classList.add("icon-none");
+    var element = document.getElementById("icon-b2");
+    element.classList.add("icon-none");
+    var element = document.getElementById("icon-b3");
+    element.classList.remove("icon-none");
+    var element = document.getElementById("icon-b4");
+    element.classList.add("icon-none");
+}
+function seleb4(){
+    var element = document.getElementById("b1");
+    element.classList.remove("borda-verde");
+    var element = document.getElementById("b2");
+    element.classList.remove("borda-verde");
+    var element = document.getElementById("b3");
+    element.classList.remove("borda-verde");
+    var element = document.getElementById("b4");
+    element.classList.add("borda-verde");
+
+    var element = document.getElementById("icon-b1");
+    element.classList.add("icon-none");
+    var element = document.getElementById("icon-b2");
+    element.classList.add("icon-none");
+    var element = document.getElementById("icon-b3");
+    element.classList.add("icon-none");
+    var element = document.getElementById("icon-b4");
+    element.classList.remove("icon-none");
+}
+function seles1(){
     var element = document.getElementById("s1");
     element.classList.add("borda-verde");
     var element = document.getElementById("s2");
@@ -17,7 +93,7 @@ function sele1(){
     var element = document.getElementById("icon-s4");
     element.classList.add("icon-none");
 }
-function sele2(){
+function seles2(){
     var element = document.getElementById("s1");
     element.classList.remove("borda-verde");
     var element = document.getElementById("s2");
@@ -36,7 +112,7 @@ function sele2(){
     var element = document.getElementById("icon-s4");
     element.classList.add("icon-none");
 }
-function sele3(){
+function seles3(){
     var element = document.getElementById("s1");
     element.classList.remove("borda-verde");
     var element = document.getElementById("s2");
@@ -55,7 +131,7 @@ function sele3(){
     var element = document.getElementById("icon-s4");
     element.classList.add("icon-none");
 }
-function sele4(){
+function seles4(){
     var element = document.getElementById("s1");
     element.classList.remove("borda-verde");
     var element = document.getElementById("s2");

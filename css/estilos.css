@@ -95,14 +95,15 @@ span{
     left: 15px;
     bottom: 16px;
     font-size: 16px;
+    Line height: 18.75px;
     font-weight: 400;
     color: #000000;
 }
 .icone{
     position: absolute;
-    bottom: 9.38%;
-    right: 9.38%;
-    font-size: 15px;
+    bottom: 14px;
+    right: 11px;
+    font-size: 19px;
     color: #32B72F;
 }
 .icon-none{
