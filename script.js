@@ -1,3 +1,79 @@
+function selef1(){
+    var element = document.getElementById("f1");
+    element.classList.add("borda-verde");
+    var element = document.getElementById("f2");
+    element.classList.remove("borda-verde");
+    var element = document.getElementById("f3");
+    element.classList.remove("borda-verde");
+    var element = document.getElementById("f4");
+    element.classList.remove("borda-verde");
+
+    var element = document.getElementById("icon-f1");
+    element.classList.remove("icon-none");
+    var element = document.getElementById("icon-f2");
+    element.classList.add("icon-none");
+    var element = document.getElementById("icon-f3");
+    element.classList.add("icon-none");
+    var element = document.getElementById("icon-f4");
+    element.classList.add("icon-none");
+}
+function selef2(){
+    var element = document.getElementById("f1");
+    element.classList.remove("borda-verde");
+    var element = document.getElementById("f2");
+    element.classList.add("borda-verde");
+    var element = document.getElementById("f3");
+    element.classList.remove("borda-verde");
+    var element = document.getElementById("f4");
+    element.classList.remove("borda-verde");
+
+    var element = document.getElementById("icon-f1");
+    element.classList.add("icon-none");
+    var element = document.getElementById("icon-f2");
+    element.classList.remove("icon-none");
+    var element = document.getElementById("icon-f3");
+    element.classList.add("icon-none");
+    var element = document.getElementById("icon-f4");
+    element.classList.add("icon-none");
+}
+function selef3(){
+    var element = document.getElementById("f1");
+    element.classList.remove("borda-verde");
+    var element = document.getElementById("f2");
+    element.classList.remove("borda-verde");
+    var element = document.getElementById("f3");
+    element.classList.add("borda-verde");
+    var element = document.getElementById("f4");
+    element.classList.remove("borda-verde");
+
+    var element = document.getElementById("icon-f1");
+    element.classList.add("icon-none");
+    var element = document.getElementById("icon-f2");
+    element.classList.add("icon-none");
+    var element = document.getElementById("icon-f3");
+    element.classList.remove("icon-none");
+    var element = document.getElementById("icon-f4");
+    element.classList.add("icon-none");
+}
+function selef4(){
+    var element = document.getElementById("f1");
+    element.classList.remove("borda-verde");
+    var element = document.getElementById("f2");
+    element.classList.remove("borda-verde");
+    var element = document.getElementById("f3");
+    element.classList.remove("borda-verde");
+    var element = document.getElementById("f4");
+    element.classList.add("borda-verde");
+
+    var element = document.getElementById("icon-f1");
+    element.classList.add("icon-none");
+    var element = document.getElementById("icon-f2");
+    element.classList.add("icon-none");
+    var element = document.getElementById("icon-f3");
+    element.classList.add("icon-none");
+    var element = document.getElementById("icon-f4");
+    element.classList.remove("icon-none");
+}
 function seleb1(){
     var element = document.getElementById("b1");
     element.classList.add("borda-verde");
