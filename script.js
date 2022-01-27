@@ -1,10 +1,18 @@
 let selecionouComida = false;
 let selecionouBebida = false;
 let selecionouSobremesa = false;
+let comida = '';
+let bebida = '';
+let sobremesa = '';
+let precoComida = 0;
+let precoBebida = 0;
+let precoSobremesa = 0;
 
 
 function selef1(){
     selecionouComida = true;
+    comida = document.querySelector("p.nome-opcao");
+    precoComida = document.querySelector("span");
 
     document.getElementById("f1").classList.add("borda-verde");
     document.getElementById("f2").classList.remove("borda-verde");
@@ -20,6 +28,8 @@ function selef1(){
 }
 function selef2(){
     selecionouComida = true;
+    comida = document.querySelector("p.nome-opcao");
+    precoComida = document.querySelector("span");
 
     document.getElementById("f1").classList.remove("borda-verde");
     document.getElementById("f2").classList.add("borda-verde");
@@ -35,6 +45,8 @@ function selef2(){
 }
 function selef3(){
     selecionouComida = true;
+    comida = document.querySelector("p.nome-opcao");
+    precoComida = document.querySelector("span");
 
     document.getElementById("f1").classList.remove("borda-verde");
     document.getElementById("f2").classList.remove("borda-verde");
@@ -50,6 +62,8 @@ function selef3(){
 }
 function selef4(){
     selecionouComida = true;
+    comida = document.querySelector("p.nome-opcao");
+    precoComida = document.querySelector("span");
 
     document.getElementById("f1").classList.remove("borda-verde");
     document.getElementById("f2").classList.remove("borda-verde");
@@ -65,6 +79,8 @@ function selef4(){
 }
 function seleb1(){
     selecionouBebida = true;
+    bebida = document.querySelector("p.nome-opcao");
+    precoBebida = document.querySelector("span");
 
     document.getElementById("b1").classList.add("borda-verde");
     document.getElementById("b2").classList.remove("borda-verde");
@@ -80,6 +96,8 @@ function seleb1(){
 }
 function seleb2(){
     selecionouBebida = true;
+    bebida = document.querySelector("p.nome-opcao");
+    precoBebida = document.querySelector("span");
 
     document.getElementById("b1").classList.remove("borda-verde");
     document.getElementById("b2").classList.add("borda-verde");
@@ -95,6 +113,8 @@ function seleb2(){
 }
 function seleb3(){
     selecionouBebida = true;
+    bebida = document.querySelector("p.nome-opcao");
+    precoBebida = document.querySelector("span");
 
     document.getElementById("b1").classList.remove("borda-verde");
     document.getElementById("b2").classList.remove("borda-verde");
@@ -110,6 +130,8 @@ function seleb3(){
 }
 function seleb4(){
     selecionouBebida = true;
+    bebida = document.querySelector("p.nome-opcao");
+    precoBebida = document.querySelector("span");
 
     document.getElementById("b1").classList.remove("borda-verde");
     document.getElementById("b2").classList.remove("borda-verde");
@@ -125,6 +147,8 @@ function seleb4(){
 }
 function seles1(){
     selecionouSobremesa = true;
+    sobremesa = document.querySelector("p.nome-opcao");
+    precoSobremesa = document.querySelector("span");
 
     document.getElementById("s1").classList.add("borda-verde");
     document.getElementById("s2").classList.remove("borda-verde");
@@ -140,6 +164,8 @@ function seles1(){
 }
 function seles2(){
     selecionouSobremesa = true;
+    sobremesa = document.querySelector("p.nome-opcao");
+    precoSobremesa = document.querySelector("span");
 
     document.getElementById("s1").classList.remove("borda-verde");
     document.getElementById("s2").classList.add("borda-verde");
@@ -155,6 +181,8 @@ function seles2(){
 }
 function seles3(){
     selecionouSobremesa = true;
+    sobremesa = document.querySelector("p.nome-opcao");
+    precoSobremesa = document.querySelector("span");
 
     document.getElementById("s1").classList.remove("borda-verde");
     document.getElementById("s2").classList.remove("borda-verde");
@@ -170,6 +198,8 @@ function seles3(){
 }
 function seles4(){
     selecionouSobremesa = true;
+    sobremesa = document.querySelector("p.nome-opcao");
+    precoSobremesa = document.querySelector("span");
 
     document.getElementById("s1").classList.remove("borda-verde");
     document.getElementById("s2").classList.remove("borda-verde");
@@ -192,5 +222,9 @@ function finalizarPedido() {
 }
 function confirmarPedido(){
     document.getElementById("confirmar-pedido").classList.remove("icon-none");
-    document.getElementById("main").classList.add("fundo-apagado");
+    document.getElementById("pagina").classList.add("fundo-apagado");
+    document.querySelector("strong").innerHTML = "comida + precoComida";
+    document.querySelector("em").innerHTML = "bebida + precoBebida";
+    document.querySelector("h4").innerHTML = "sobremesa + precoSobremesa";
+    document.querySelector("h5").innerHTML = "Total" + "(precoComida + precoSobremesa + precoBebida)";
 }

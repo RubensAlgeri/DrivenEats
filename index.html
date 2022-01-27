@@ -15,11 +15,12 @@
 </head>
 
 <body>
+    <div id="pagina">
     <header>
         <h1>DrivenEats</h1>
         <h2>Sua comida em 6 minutos</h2>
     </header>
-    <main id="main">
+    <main id="main" class="">
         <div class="pratos" data-identifier="dishes">
             <p class="titulo">Primeiro, seu prato</p>
             <div class="opcoes">
@@ -144,11 +145,6 @@
             </div>
         </div>
     </main>
-    <div id="confirmar-pedido" class="confirmar-pedido icon-none">
-        <p>Confirme seu pedido</p>
-        <p>Tudo certo, pode pedir!</p>
-        <p>Cancelar</p>
-    </div>
     <footer>
         <div id="pedido-aberto" class="aberto">
             <p class="pedido-aberto">Selecione os 3 itens <br>para fechar o pedido</p>
@@ -157,6 +153,16 @@
             <p class="pedido-completo">Fechar pedido</p>
         </div>
     </footer>
+</div>
+    <div id="confirmar-pedido" class="confirmar-pedido icon-none">
+        <p>Confirme seu pedido</p>
+        <strong></strong>
+        <em></em>
+        <h4></h4>
+        <h5></h5>
+        <p>Tudo certo, pode pedir!</p>
+        <p>Cancelar</p>
+    </div>
     <script src="/script.js"></script>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
