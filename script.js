@@ -221,9 +221,12 @@ function finalizarPedido() {
     }
 }
 function confirmarPedido(){
-    document.getElementById("pagina").classList.remove("icon-none");
+    document.getElementById("confirmar-pedido").classList.remove("icon-none");
     document.querySelector("strong").innerHTML = "comida + precoComida";
     document.querySelector("em").innerHTML = "bebida + precoBebida";
     document.querySelector("h4").innerHTML = "sobremesa + precoSobremesa";
     document.querySelector("h5").innerHTML = "Total" + "(precoComida + precoSobremesa + precoBebida)";
+}
+function cancelar(){
+    document.getElementById("confirmar-pedido").classList.add("icon-none");
 }
