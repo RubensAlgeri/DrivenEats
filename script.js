@@ -1,6 +1,6 @@
-// var selecionouComida = 0;
-// var selecionouBebida = 0;
-// var selecionouSobremesa = 0;
+let selecionouComida = false;
+let selecionouBebida = false;
+let selecionouSobremesa = false;
 
 
 function selef1(){
@@ -15,6 +15,8 @@ function selef1(){
     document.getElementById("icon-f2").classList.add("icon-none");
     document.getElementById("icon-f3").classList.add("icon-none");
     document.getElementById("icon-f4").classList.add("icon-none");
+
+    finalizarPedido();
 }
 function selef2(){
     selecionouComida = true;
@@ -28,6 +30,8 @@ function selef2(){
     document.getElementById("icon-f2").classList.remove("icon-none");
     document.getElementById("icon-f3").classList.add("icon-none");
     document.getElementById("icon-f4").classList.add("icon-none");
+
+    finalizarPedido();
 }
 function selef3(){
     selecionouComida = true;
@@ -41,6 +45,8 @@ function selef3(){
     document.getElementById("icon-f2").classList.add("icon-none");
     document.getElementById("icon-f3").classList.remove("icon-none");
     document.getElementById("icon-f4").classList.add("icon-none");
+    
+    finalizarPedido();
 }
 function selef4(){
     selecionouComida = true;
@@ -54,6 +60,8 @@ function selef4(){
     document.getElementById("icon-f2").classList.add("icon-none");
     document.getElementById("icon-f3").classList.add("icon-none");
     document.getElementById("icon-f4").classList.remove("icon-none");
+    
+    finalizarPedido();
 }
 function seleb1(){
     selecionouBebida = true;
@@ -67,6 +75,8 @@ function seleb1(){
     document.getElementById("icon-b2").classList.add("icon-none");
     document.getElementById("icon-b3").classList.add("icon-none");
     document.getElementById("icon-b4").classList.add("icon-none");
+    
+    finalizarPedido();
 }
 function seleb2(){
     selecionouBebida = true;
@@ -80,6 +90,8 @@ function seleb2(){
     document.getElementById("icon-b2").classList.remove("icon-none");
     document.getElementById("icon-b3").classList.add("icon-none");
     document.getElementById("icon-b4").classList.add("icon-none");
+    
+    finalizarPedido();
 }
 function seleb3(){
     selecionouBebida = true;
@@ -93,6 +105,8 @@ function seleb3(){
     document.getElementById("icon-b2").classList.add("icon-none");
     document.getElementById("icon-b3").classList.remove("icon-none");
     document.getElementById("icon-b4").classList.add("icon-none");
+    
+    finalizarPedido();
 }
 function seleb4(){
     selecionouBebida = true;
@@ -106,6 +120,8 @@ function seleb4(){
     document.getElementById("icon-b2").classList.add("icon-none");
     document.getElementById("icon-b3").classList.add("icon-none");
     document.getElementById("icon-b4").classList.remove("icon-none");
+    
+    finalizarPedido();
 }
 function seles1(){
     selecionouSobremesa = true;
@@ -119,6 +135,8 @@ function seles1(){
     document.getElementById("icon-s2").classList.add("icon-none");
     document.getElementById("icon-s3").classList.add("icon-none");
     document.getElementById("icon-s4").classList.add("icon-none");
+    
+    finalizarPedido();
 }
 function seles2(){
     selecionouSobremesa = true;
@@ -132,6 +150,8 @@ function seles2(){
     document.getElementById("icon-s2").classList.remove("icon-none");
     document.getElementById("icon-s3").classList.add("icon-none");
     document.getElementById("icon-s4").classList.add("icon-none");
+    
+    finalizarPedido();
 }
 function seles3(){
     selecionouSobremesa = true;
@@ -145,6 +165,8 @@ function seles3(){
     document.getElementById("icon-s2").classList.add("icon-none");
     document.getElementById("icon-s3").classList.remove("icon-none");
     document.getElementById("icon-s4").classList.add("icon-none");
+    
+    finalizarPedido();
 }
 function seles4(){
     selecionouSobremesa = true;
@@ -158,16 +180,17 @@ function seles4(){
     document.getElementById("icon-s2").classList.add("icon-none");
     document.getElementById("icon-s3").classList.add("icon-none");
     document.getElementById("icon-s4").classList.remove("icon-none");
-}
-// var pedidoAberto = document.getElementById("2");
-// var fecharPedido = document.getElementById("3");
 
-// if(selecionouComida === true && selecionouBebida === true && selecionouSobremesa === true){
-//     pedidoAberto.classList.add("icon-none");
-//     fecharPedido.classList.remove("icon-none");
-// }
-// function confirmarPedido(){
-//     var confirmar = document.getElementById("1");
-//     confirmar.classList.remove("icon-none");
-//     document.getElementById("7").classList.add("fundo-apagado");
-// }
+    finalizarPedido();
+}
+
+function finalizarPedido() {
+    if (selecionouComida === true && selecionouBebida === true && selecionouSobremesa === true) {
+        document.getElementById("pedido-aberto").classList.add("icon-none");
+        document.getElementById("pedido-fechado").classList.remove("icon-none");
+    }
+}
+function confirmarPedido(){
+    document.getElementById("confirmar-pedido").classList.remove("icon-none");
+    document.getElementById("main").classList.add("fundo-apagado");
+}
