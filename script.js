@@ -221,6 +221,8 @@ function finalizarPedido() {
     }
 }
 function confirmarPedido(){
+    prompt("Seu Nome");
+    prompt("Seu endereço");
     document.getElementById("confirmar-pedido").classList.remove("icon-none");
     document.querySelector("strong").innerHTML = "comida + precoComida";
     document.querySelector("em").innerHTML = "bebida + precoBebida";
