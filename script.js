@@ -221,8 +221,7 @@ function finalizarPedido() {
     }
 }
 function confirmarPedido(){
-    document.getElementById("confirmar-pedido").classList.remove("icon-none");
-    document.getElementById("pagina").classList.add("fundo-apagado");
+    document.getElementById("pagina").classList.remove("icon-none");
     document.querySelector("strong").innerHTML = "comida + precoComida";
     document.querySelector("em").innerHTML = "bebida + precoBebida";
     document.querySelector("h4").innerHTML = "sobremesa + precoSobremesa";

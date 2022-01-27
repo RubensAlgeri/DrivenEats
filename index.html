@@ -15,7 +15,6 @@
 </head>
 
 <body>
-    <div id="pagina">
     <header>
         <h1>DrivenEats</h1>
         <h2>Sua comida em 6 minutos</h2>
@@ -154,17 +153,20 @@
         </div>
     </footer>
 </div>
-    <div id="confirmar-pedido" class="confirmar-pedido icon-none">
-        <p>Confirme seu pedido</p>
+<div id="pagina" class="fundo-apagado icon-none">
+    <div id="confirmar-pedido" data-identifier="confirmation-dialog" class="confirmar-pedido">
+        <p class="confirme">Confirme seu pedido</p>
         <strong></strong>
         <em></em>
         <h4></h4>
-        <h5></h5>
-        <p>Tudo certo, pode pedir!</p>
-        <p>Cancelar</p>
+        <h5>TOTAL</h5>
+        <div class="pedir">
+        <p class="peça">Tudo certo, pode pedir!</p>
+    </div>
+        <p onclick="" class="cancelar">Cancelar</p>
     </div>
     <script src="/script.js"></script>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
 
-</html>
+</html
