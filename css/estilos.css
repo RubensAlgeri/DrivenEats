@@ -177,6 +177,8 @@ h4{
 }
 h5{
     position: absolute;
+    display: flex;
+    justify-content: space-between;
     top: 196px;
     font-size: 22px;
     font-weight: 700;
