@@ -131,15 +131,13 @@ footer div{
     color: #ffffff;
 }
 .confirmar-pedido{
-    position: fixed;
     position: relative;
     display: flex;
-    justify-content: center;
-    top: 33%;
-    left: 4.5%;
-    z-index: 2;
+    margin: auto;
+    top: 32.7%;
+    z-index: 3;
     height: 353px;
-    width: 377px;
+    width: 91%;
     border-radius: 9px;
     box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
     background-color: #50D074;
@@ -149,11 +147,16 @@ footer div{
     font-weight: 700;
     color: #ffffff;
     position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 87.25%;
+    left: calc(50% - 87.25%/2 + 0.5px);
     top: 21px;
 }
 strong{
     position: absolute;
     top: 76px;
+    left: 26px;
     font-size: 22px;
     font-weight: 400;
     letter-spacing: 0.018em;
@@ -162,6 +165,7 @@ strong{
 em{
     position: absolute;
     top: 116px;
+    left: 26px;
     font-size: 22px;
     font-weight: 400;
     letter-spacing: 0.018em;
@@ -169,6 +173,7 @@ em{
 }
 h4{
     position: absolute;
+    left: 26px;
     top: 156px;
     font-size: 22px;
     font-weight: 400;
@@ -177,8 +182,7 @@ h4{
 }
 h5{
     position: absolute;
-    display: flex;
-    justify-content: space-between;
+    left: 26px;
     top: 196px;
     font-size: 22px;
     font-weight: 700;
@@ -187,13 +191,13 @@ h5{
 }
 .pedir{
     position: absolute;
-    left: calc(50% - 329px/2 + 0.5px);
+    left: calc(50% - 87.25%/2 + 0.5px);
     top: 247px;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 52px;
-    width: 333px;
+    width: 87.25%;
     border-radius: 100px;
     background-color: #ffffff;
 }
@@ -206,12 +210,13 @@ h5{
 }
 .cancelar{
     position: absolute;
+    left: calc(50% - 87.25%/2 + 0.5px);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 20px;
     height: 52px;
-    width: 333px;
+    width: 87.25%;
     font-weight: 700;
     color: #ffffff;
     top: 299px;
@@ -224,7 +229,6 @@ h5{
     right: 0;
     z-index: 2;
     background: rgba(255, 255, 255, 0.9);
-    overflow: hidden;
 }
 .aberto{
     background-color: #cbcbcb;

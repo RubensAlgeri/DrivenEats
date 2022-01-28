@@ -14,7 +14,7 @@ let valorSobremesa = 0;
 function selef1(){
     selecionouComida = true;
     comida = "Frango Yin Yang";
-    precoComida = "R$ 14,90";
+    precoComida = " 14,90";
     valorComida = 14.90;
 
 
@@ -33,7 +33,7 @@ function selef1(){
 function selef2(){
     selecionouComida = true;
     comida = "Frango Yin Yang";
-    precoComida = "R$ 15,90";
+    precoComida = " 15,90";
     valorComida = 15.90;
 
     document.getElementById("f1").classList.remove("borda-verde");
@@ -51,7 +51,7 @@ function selef2(){
 function selef3(){
     selecionouComida = true;
     comida = "Frango Yin Yang";
-    precoComida = "R$ 16,90";
+    precoComida = " 16,90";
     valorComida = 16.90;
 
     document.getElementById("f1").classList.remove("borda-verde");
@@ -69,7 +69,7 @@ function selef3(){
 function selef4(){
     selecionouComida = true;
     comida = "Frango Yin Yang";
-    precoComida = "R$ 17,90";
+    precoComida = " 17,90";
     valorComida = 17.90;
 
     document.getElementById("f1").classList.remove("borda-verde");
@@ -87,7 +87,7 @@ function selef4(){
 function seleb1(){
     selecionouBebida = true;
     bebida = "Coquinha Gelada";
-    precoBebida = "R$ 4,90";
+    precoBebida = " 4,90";
     valorBebida = 4.90;
 
     document.getElementById("b1").classList.add("borda-verde");
@@ -105,7 +105,7 @@ function seleb1(){
 function seleb2(){
     selecionouBebida = true;
     bebida = "Coquinha Gelada";
-    precoBebida = "R$ 3,90";
+    precoBebida = " 3,90";
     valorBebida = 3.90;
 
     document.getElementById("b1").classList.remove("borda-verde");
@@ -123,7 +123,7 @@ function seleb2(){
 function seleb3(){
     selecionouBebida = true;
     bebida = "Coquinha Gelada";
-    precoBebida = "R$ 5,90";
+    precoBebida = " 5,90";
     valorBebida = 5.90;
 
     document.getElementById("b1").classList.remove("borda-verde");
@@ -141,7 +141,7 @@ function seleb3(){
 function seleb4(){
     selecionouBebida = true;
     bebida = "Coquinha Gelada";
-    precoBebida = "R$ 2,90";
+    precoBebida = " 2,90";
     valorBebida = 2.90;
 
     document.getElementById("b1").classList.remove("borda-verde");
@@ -159,7 +159,7 @@ function seleb4(){
 function seles1(){
     selecionouSobremesa = true;
     sobremesa = "Pudim";
-    precoSobremesa = "R$ 7,90";
+    precoSobremesa = " 7,90";
     valorSobremesa = 7.90;
 
     document.getElementById("s1").classList.add("borda-verde");
@@ -177,7 +177,7 @@ function seles1(){
 function seles2(){
     selecionouSobremesa = true;
     sobremesa = "Pudim";
-    precoSobremesa = "R$ 8,90";
+    precoSobremesa = " 8,90";
     valorSobremesa = 8.90;
 
     document.getElementById("s1").classList.remove("borda-verde");
@@ -195,7 +195,7 @@ function seles2(){
 function seles3(){
     selecionouSobremesa = true;
     sobremesa = "Pudim";
-    precoSobremesa = "R$ 9,90";
+    precoSobremesa = " 9,90";
     valorSobremesa = 9.90;
 
     document.getElementById("s1").classList.remove("borda-verde");
@@ -213,7 +213,7 @@ function seles3(){
 function seles4(){
     selecionouSobremesa = true;
     sobremesa = "Pudim";
-    precoSobremesa = "R$ 10,90";
+    precoSobremesa = " 10,90";
     valorSobremesa = 10.90;
 
     document.getElementById("s1").classList.remove("borda-verde");
@@ -236,12 +236,12 @@ function revisarPedido() {
     }
 }
 function confirmarPedido(){
-    let resultado = valorComida+valorBebida+valorSobremesa;
+    let resultado = `R$ ${(valorComida+valorBebida+valorSobremesa).toFixed(2)}`;
     document.getElementById("confirmar-pedido").classList.remove("icon-none");
     document.querySelector("strong").innerHTML = comida + precoComida;
-    document.querySelector("em").innerHTML = (bebida + precoBebida);
+    document.querySelector("em").innerHTML = bebida + precoBebida;
     document.querySelector("h4").innerHTML = sobremesa + precoSobremesa;
-    document.querySelector("h5").innerHTML = "TOTAL" + resultado.toFixed(2);
+    document.querySelector("h5").innerHTML = `TOTAL \n ${resultado}`;
 }
 function finalizarPedido(){
     let nomeCliente = prompt("Seu Nome");
