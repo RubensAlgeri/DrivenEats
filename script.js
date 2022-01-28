@@ -4,15 +4,19 @@ let selecionouSobremesa = false;
 let comida = '';
 let bebida = '';
 let sobremesa = '';
-let precoComida = 0;
-let precoBebida = 0;
-let precoSobremesa = 0;
-
+let precoComida = '';
+let precoBebida = '';
+let precoSobremesa = '';
+let valorComida = 0;
+let valorBebida = 0;
+let valorSobremesa = 0;
 
 function selef1(){
     selecionouComida = true;
     comida = document.querySelector("p.nome-opcao");
     precoComida = document.querySelector("span");
+    valorComida = 14.90;
+
 
     document.getElementById("f1").classList.add("borda-verde");
     document.getElementById("f2").classList.remove("borda-verde");
@@ -24,12 +28,13 @@ function selef1(){
     document.getElementById("icon-f3").classList.add("icon-none");
     document.getElementById("icon-f4").classList.add("icon-none");
 
-    finalizarPedido();
+    revisarPedido();
 }
 function selef2(){
     selecionouComida = true;
     comida = document.querySelector("p.nome-opcao");
     precoComida = document.querySelector("span");
+    valorComida = 15.90;
 
     document.getElementById("f1").classList.remove("borda-verde");
     document.getElementById("f2").classList.add("borda-verde");
@@ -41,12 +46,13 @@ function selef2(){
     document.getElementById("icon-f3").classList.add("icon-none");
     document.getElementById("icon-f4").classList.add("icon-none");
 
-    finalizarPedido();
+    revisarPedido();
 }
 function selef3(){
     selecionouComida = true;
     comida = document.querySelector("p.nome-opcao");
     precoComida = document.querySelector("span");
+    valorComida = 16.90;
 
     document.getElementById("f1").classList.remove("borda-verde");
     document.getElementById("f2").classList.remove("borda-verde");
@@ -58,12 +64,13 @@ function selef3(){
     document.getElementById("icon-f3").classList.remove("icon-none");
     document.getElementById("icon-f4").classList.add("icon-none");
     
-    finalizarPedido();
+    revisarPedido();
 }
 function selef4(){
     selecionouComida = true;
     comida = document.querySelector("p.nome-opcao");
     precoComida = document.querySelector("span");
+    valorComida = 17.90;
 
     document.getElementById("f1").classList.remove("borda-verde");
     document.getElementById("f2").classList.remove("borda-verde");
@@ -75,12 +82,13 @@ function selef4(){
     document.getElementById("icon-f3").classList.add("icon-none");
     document.getElementById("icon-f4").classList.remove("icon-none");
     
-    finalizarPedido();
+    revisarPedido();
 }
 function seleb1(){
     selecionouBebida = true;
     bebida = document.querySelector("p.nome-opcao");
     precoBebida = document.querySelector("span");
+    valorBebida = 4.90;
 
     document.getElementById("b1").classList.add("borda-verde");
     document.getElementById("b2").classList.remove("borda-verde");
@@ -92,12 +100,13 @@ function seleb1(){
     document.getElementById("icon-b3").classList.add("icon-none");
     document.getElementById("icon-b4").classList.add("icon-none");
     
-    finalizarPedido();
+    revisarPedido();
 }
 function seleb2(){
     selecionouBebida = true;
     bebida = document.querySelector("p.nome-opcao");
     precoBebida = document.querySelector("span");
+    valorBebida = 3.90;
 
     document.getElementById("b1").classList.remove("borda-verde");
     document.getElementById("b2").classList.add("borda-verde");
@@ -109,12 +118,13 @@ function seleb2(){
     document.getElementById("icon-b3").classList.add("icon-none");
     document.getElementById("icon-b4").classList.add("icon-none");
     
-    finalizarPedido();
+    revisarPedido();
 }
 function seleb3(){
     selecionouBebida = true;
     bebida = document.querySelector("p.nome-opcao");
     precoBebida = document.querySelector("span");
+    valorBebida = 5.90;
 
     document.getElementById("b1").classList.remove("borda-verde");
     document.getElementById("b2").classList.remove("borda-verde");
@@ -126,12 +136,13 @@ function seleb3(){
     document.getElementById("icon-b3").classList.remove("icon-none");
     document.getElementById("icon-b4").classList.add("icon-none");
     
-    finalizarPedido();
+    revisarPedido();
 }
 function seleb4(){
     selecionouBebida = true;
     bebida = document.querySelector("p.nome-opcao");
     precoBebida = document.querySelector("span");
+    valorBebida = 2.90;
 
     document.getElementById("b1").classList.remove("borda-verde");
     document.getElementById("b2").classList.remove("borda-verde");
@@ -143,12 +154,13 @@ function seleb4(){
     document.getElementById("icon-b3").classList.add("icon-none");
     document.getElementById("icon-b4").classList.remove("icon-none");
     
-    finalizarPedido();
+    revisarPedido();
 }
 function seles1(){
     selecionouSobremesa = true;
     sobremesa = document.querySelector("p.nome-opcao");
     precoSobremesa = document.querySelector("span");
+    valorSobremesa = 7.90;
 
     document.getElementById("s1").classList.add("borda-verde");
     document.getElementById("s2").classList.remove("borda-verde");
@@ -160,12 +172,13 @@ function seles1(){
     document.getElementById("icon-s3").classList.add("icon-none");
     document.getElementById("icon-s4").classList.add("icon-none");
     
-    finalizarPedido();
+    revisarPedido();
 }
 function seles2(){
     selecionouSobremesa = true;
     sobremesa = document.querySelector("p.nome-opcao");
     precoSobremesa = document.querySelector("span");
+    valorSobremesa = 8.90;
 
     document.getElementById("s1").classList.remove("borda-verde");
     document.getElementById("s2").classList.add("borda-verde");
@@ -177,12 +190,13 @@ function seles2(){
     document.getElementById("icon-s3").classList.add("icon-none");
     document.getElementById("icon-s4").classList.add("icon-none");
     
-    finalizarPedido();
+    revisarPedido();
 }
 function seles3(){
     selecionouSobremesa = true;
     sobremesa = document.querySelector("p.nome-opcao");
     precoSobremesa = document.querySelector("span");
+    valorSobremesa = 9.90;
 
     document.getElementById("s1").classList.remove("borda-verde");
     document.getElementById("s2").classList.remove("borda-verde");
@@ -194,12 +208,13 @@ function seles3(){
     document.getElementById("icon-s3").classList.remove("icon-none");
     document.getElementById("icon-s4").classList.add("icon-none");
     
-    finalizarPedido();
+    revisarPedido();
 }
 function seles4(){
     selecionouSobremesa = true;
     sobremesa = document.querySelector("p.nome-opcao");
     precoSobremesa = document.querySelector("span");
+    valorSobremesa = 10.90;
 
     document.getElementById("s1").classList.remove("borda-verde");
     document.getElementById("s2").classList.remove("borda-verde");
@@ -211,23 +226,26 @@ function seles4(){
     document.getElementById("icon-s3").classList.add("icon-none");
     document.getElementById("icon-s4").classList.remove("icon-none");
 
-    finalizarPedido();
+    revisarPedido();
 }
 
-function finalizarPedido() {
+function revisarPedido() {
     if (selecionouComida === true && selecionouBebida === true && selecionouSobremesa === true) {
         document.getElementById("pedido-aberto").classList.add("icon-none");
         document.getElementById("pedido-fechado").classList.remove("icon-none");
     }
 }
 function confirmarPedido(){
-    prompt("Seu Nome");
-    prompt("Seu endereço");
+    let resultado = valorComida+valorBebida+valorSobremesa;
     document.getElementById("confirmar-pedido").classList.remove("icon-none");
-    document.querySelector("strong").innerHTML = "comida + precoComida";
-    document.querySelector("em").innerHTML = "bebida + precoBebida";
-    document.querySelector("h4").innerHTML = "sobremesa + precoSobremesa";
-    document.querySelector("h5").innerHTML = "Total" + "(precoComida + precoSobremesa + precoBebida)";
+    document.querySelector("strong").innerHTML = comida + precoComida;
+    document.querySelector("em").innerHTML = "${bebida + precoBebida";
+    document.querySelector("h4").innerHTML = sobremesa + precoSobremesa;
+    document.querySelector("h5").innerHTML = "TOTAL" + resultado.toFixed(2);
+}
+function finalizarPedido(){
+    let nomeCliente = prompt("Seu Nome");
+    let enderecoCliente = prompt("Seu endereço");
 }
 function cancelar(){
     document.getElementById("confirmar-pedido").classList.add("icon-none");
