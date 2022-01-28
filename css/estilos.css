@@ -154,38 +154,55 @@ footer div{
     top: 21px;
 }
 strong{
-    position: absolute;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0.018em;
+    color: #ffffff;
+}
+.confirme-comida{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 26px;
+    width: 87.25%;
     top: 76px;
-    left: 26px;
-    font-size: 22px;
-    font-weight: 400;
-    letter-spacing: 0.018em;
-    color: #ffffff;
-}
-em{
     position: absolute;
+}
+.confirme-bebida{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 26px;
+    width: 87.25%;
     top: 116px;
-    left: 26px;
-    font-size: 22px;
-    font-weight: 400;
-    letter-spacing: 0.018em;
-    color: #ffffff;
-}
-h4{
     position: absolute;
-    left: 26px;
+}
+.confirme-sobremesa{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 26px;
+    width: 87.25%;
     top: 156px;
+    position: absolute;
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 26px;
+    width: 87.25%;
+    top: 196px;
+    font-weight: 700;
+    position: absolute;
     font-size: 22px;
-    font-weight: 400;
     letter-spacing: 0.018em;
     color: #ffffff;
 }
+
 h5{
+    display: flex;
+    justify-content: space-between;
     position: absolute;
     left: 26px;
-    top: 196px;
     font-size: 22px;
-    font-weight: 700;
+
     letter-spacing: 0.018em;
     color: #ffffff;
 }

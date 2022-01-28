@@ -156,15 +156,28 @@
 <div id="confirmar-pedido" class="fundo-apagado icon-none">
     <div data-identifier="confirmation-dialog" class="confirmar-pedido">
         <p class="confirme">Confirme seu pedido</p>
-        <strong></strong>
-        <em></em>
-        <h4></h4>
-        <h5></h5>
+        <div class="confirme-comida">
+            <strong class="nome-comida"></strong>
+            <strong class="preco-comida"></strong>
+        </div>
+        <div class="confirme-bebida">
+            <strong class="nome-bebida"></strong>
+            <strong class="preco-bebida"></strong>
+        </div>
+        <div class="confirme-sobremesa">
+            <strong class="nome-sobremesa"></strong>
+            <strong class="preco-sobremesa"></strong>
+        </div>
+        <div class="total">
+            <p>TOTAL</p>
+            <p class="preco-total"></p>
+        </div>
         <div onclick="" class="pedir">
-        <p onclick="finalizarPedido()" class="peça">Tudo certo, pode pedir!</p>
-    </div>
+            <p onclick="finalizarPedido()" class="peça">Tudo certo, pode pedir!</p>
+        </div>
         <p onclick="cancelar()" class="cancelar">Cancelar</p>
     </div>
+</div>
     <script src="/script.js"></script>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>

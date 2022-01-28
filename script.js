@@ -237,18 +237,26 @@ function revisarPedido() {
 }
 function confirmarPedido(){
     let resultado = `R$ ${(valorComida+valorBebida+valorSobremesa).toFixed(2)}`;
+    resultado = resultado.replace("." , ",");
     document.getElementById("confirmar-pedido").classList.remove("icon-none");
-    document.querySelector("strong").innerHTML = comida + precoComida;
-    document.querySelector("em").innerHTML = bebida + precoBebida;
-    document.querySelector("h4").innerHTML = sobremesa + precoSobremesa;
-    document.querySelector("h5").innerHTML = `TOTAL \n ${resultado}`;
+    document.querySelector("strong.nome-comida").innerHTML = comida;
+    document.querySelector("strong.preco-comida").innerHTML = precoComida;
+    document.querySelector("strong.nome-bebida").innerHTML = bebida;
+    document.querySelector("strong.preco-bebida").innerHTML = precoBebida;
+    document.querySelector("strong.nome-sobremesa").innerHTML = sobremesa;
+    document.querySelector("strong.preco-sobremesa").innerHTML =precoSobremesa;
+    document.querySelector("p.preco-total").innerHTML = resultado;
 }
-function finalizarPedido(){
-    let nomeCliente = prompt("Seu Nome");
-    let enderecoCliente = prompt("Seu endereço");
+function finalizarPedido() {
+    let nomeCliente = prompt("Seu Nome por favor.");
+    let enderecoCliente = prompt("Seu endereço por favor.");
+    // let mensagem = "Olá, gostaria de fazer o pedido:\n- Prato: " + comida + "\n- Bebida: " + bebida + "\n- Sobremesa: " + sobremesa + "\nTotal: " + resultado + "\n \nNome: " + nomeCliente + "\nEndereço: " + enderecoCliente;
+    // let mensage = encodeURIComponent(mensagem);
+    let mensage = `Olá!`;
+
+    const url = "https://wa.me/5521999999999?text=" + mensage;
+    window.open(url);
 }
 function cancelar(){
     document.getElementById("confirmar-pedido").classList.add("icon-none");
-    // encodeURIComponent(minhaString)
-    // https://wa.me/5542999505985
 }
