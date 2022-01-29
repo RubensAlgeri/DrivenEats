@@ -19,15 +19,8 @@ function selecionarComida(botao, classeOpcao, classeIcone){
     let precoComida2 = precoComida1.replace(",",".");
     valorComida = parseFloat(precoComida2);
 
-const selecionado = document.querySelector(`.${classeOpcao}.borda-verde`);
-    if (selecionado !== null) {
-        selecionado.classList.remove("borda-verde");
-    }
-    const selec = document.querySelector(`.${classeOpcao} .icone:not(.icon-none)`);
-    if (selec !== null) {
-        selec.classList.add("icon-none");
-        
-    }
+    deselecionarOpcao(classeOpcao);
+
     document.querySelector('.' + classeIcone).classList.remove("icon-none");
     botao.classList.add("borda-verde");
     
@@ -41,14 +34,8 @@ function selecionarBebida(botao, classeOpcao, classeIcone){
     let precoBebida1 = precoBebida.replace("R$","");
     let precoBebida2 = precoBebida1.replace(",",".");
     valorBebida = parseFloat(precoBebida2);
-    const selecionado = document.querySelector(`.${classeOpcao}.borda-verde`);
-    if (selecionado !== null) {
-        selecionado.classList.remove("borda-verde");
-    }
-    const selec = document.querySelector(`.${classeOpcao} .icone:not(.icon-none)`);
-    if (selec !== null) {
-        selec.classList.add("icon-none");
-    }
+
+    deselecionarOpcao(classeOpcao);
 
     document.querySelector('.' + classeIcone).classList.remove("icon-none");
     botao.classList.add("borda-verde");
@@ -64,6 +51,14 @@ function selecionarSobremesa(botao, classeOpcao, classeIcone){
     let precoSobremesa2 = precoSobremesa1.replace(",",".");
     valorSobremesa = parseFloat(precoSobremesa2);
 
+    deselecionarOpcao(classeOpcao);
+    
+    document.querySelector('.' + classeIcone).classList.remove("icon-none");
+    botao.classList.add("borda-verde");
+
+    revisarPedido();
+}
+function deselecionarOpcao(classeOpcao){
     const selecionado = document.querySelector(`.${classeOpcao}.borda-verde`);
     if (selecionado !== null) {
         selecionado.classList.remove("borda-verde");
@@ -72,14 +67,6 @@ function selecionarSobremesa(botao, classeOpcao, classeIcone){
     if (selec !== null) {
         selec.classList.add("icon-none");
     }
-    
-    document.querySelector('.' + classeIcone).classList.remove("icon-none");
-    botao.classList.add("borda-verde");
-
-    revisarPedido();
-}
-function deselecionarOpcao(){
-
 }
 
 function revisarPedido() {
