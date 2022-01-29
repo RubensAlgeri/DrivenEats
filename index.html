@@ -19,43 +19,43 @@
         <h1>DrivenEats</h1>
         <h2>Sua comida em 6 minutos</h2>
     </header>
-    <main id="main" class="">
+    <main class="">
         <div class="pratos" data-identifier="dishes">
             <p class="titulo">Primeiro, seu prato</p>
             <div class="opcoes">
-                <div onclick="selef1()" id="f1" class="opcao" data-identifier="food-option">
+                <div onclick="selecionarComida(this,'comer','f1')" class="opcao comer" data-identifier="food-option">
                     <img src="imagens/frango_yin_yang 1.png" alt="Frango Yin Yang">
                     <p class="nome-opcao" data-identifier="food-title">Frango Yin Yang</p>
                     <p class="descricao">Um pouco de batata,<br>um pouco de salada</p>
                     <span data-identifier="food-price">R$ 14,90</span>
-                    <div id="icon-f1" class="icone icon-none">
+                    <div class="icone f1 icon-none">
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </div>
-                <div onclick="selef2()" id="f2" class="opcao" data-identifier="food-option">
+                <div onclick="selecionarComida(this,'comer', 'f2')" class="opcao comer" data-identifier="food-option">
                     <img src="imagens/frango_yin_yang 1.png" alt="Frango Yin Yang">
                     <p class="nome-opcao" data-identifier="food-title">Frango Yin Yang</p>
                     <p class="descricao">Um pouco de batata,<br>um pouco de salada</p>
                     <span data-identifier="food-price">R$ 15,90</span>
-                    <div id="icon-f2" class="icone icon-none">
+                    <div class="icone f2 icon-none">
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </div>
-                <div onclick="selef3()" id="f3" class="opcao" data-identifier="food-option">
+                <div onclick="selecionarComida(this, 'comer', 'f3')" class="opcao comer" data-identifier="food-option">
                     <img src="imagens/frango_yin_yang 1.png" alt="Frango Yin Yang">
                     <p class="nome-opcao" data-identifier="food-title">Frango Yin Yang</p>
                     <p class="descricao">Um pouco de batata,<br>um pouco de salada</p>
                     <span data-identifier="food-price">R$ 16,90</span>
-                    <div id="icon-f3" class="icone icon-none">
+                    <div class="icone f3 icon-none">
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </div>
-                <div onclick="selef4()" id="f4" class="opcao" data-identifier="food-option">
+                <div onclick="selecionarComida(this, 'comer', 'f4')" class="opcao comer" data-identifier="food-option">
                     <img src="imagens/frango_yin_yang 1.png" alt="Frango Yin Yang">
                     <p class="nome-opcao" data-identifier="food-title">Frango Yin Yang</p>
                     <p class="descricao">Um pouco de batata,<br>um pouco de salada</p>
                     <span data-identifier="food-price">R$ 17,90</span>
-                    <div id="icon-f4" class="icone icon-none">
+                    <div class="icone f4 icon-none">
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </div>
@@ -64,39 +64,39 @@
         <div class="bebidas" data-identifier="drinks">
             <p class="titulo">Agora, sua bebida</p>
             <div class="opcoes">
-                <div onclick="seleb1()" id="b1" class="opcao" data-identifier="food-option">
+                <div onclick="selecionarBebida(this, 'beber', 'b1')" class="opcao beber" data-identifier="food-option">
                     <img src="imagens/coquinha_gelada 1.png" alt="Coquinha gelada">
                     <p class="nome-opcao" data-identifier="food-title">Coquinha gelada</p>
                     <p class="descricao">Lata 350ml</p>
                     <span data-identifier="food-price">R$ 4,90</span>
-                    <div id="icon-b1" class="icone icon-none">
+                    <div class="icone b1 icon-none">
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </div>
-                <div onclick="seleb2()" id="b2" class="opcao" data-identifier="food-option">
+                <div onclick="selecionarBebida(this, 'beber', 'b2')" class="opcao beber" data-identifier="food-option">
                     <img src="imagens/coquinha_gelada 1.png" alt="Coquinha gelada">
                     <p class="nome-opcao" data-identifier="food-title">Coquinha gelada</p>
                     <p class="descricao">Lata 350ml</p>
                     <span data-identifier="food-price">R$ 3,90</span>
-                    <div id="icon-b2" class="icone icon-none">
+                    <div class="icone b2 icon-none">
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </div>
-                <div onclick="seleb3()" id="b3" class="opcao" data-identifier="food-option">
+                <div onclick="selecionarBebida(this, 'beber', 'b3')" class="opcao beber" data-identifier="food-option">
                     <img src="imagens/coquinha_gelada 1.png" alt="Coquinha gelada">
                     <p class="nome-opcao" data-identifier="food-title">Coquinha gelada</p>
                     <p class="descricao">Lata 350ml</p>
                     <span data-identifier="food-price">R$ 5,90</span>
-                    <div id="icon-b3" class="icone icon-none">
+                    <div class="icone b3 icon-none">
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </div>
-                <div onclick="seleb4()" id="b4" class="opcao" data-identifier="food-option">
+                <div onclick="selecionarBebida(this, 'beber', 'b4')" class="opcao beber" data-identifier="food-option">
                     <img src="imagens/coquinha_gelada 1.png" alt="Coquinha gelada">
                     <p class="nome-opcao" data-identifier="food-title">Coquinha gelada</p>
                     <p class="descricao">Lata 350ml</p>
                     <span data-identifier="food-price">R$ 2,90</span>
-                    <div id="icon-b4" class="icone icon-none">
+                    <div class="icone b4 icon-none">
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                 </div>
@@ -104,39 +104,39 @@
         </div>
         <div class="sobremesa" data-identifier="desserts">
             <p class="titulo">Por fim, sua sobremesa</p>
-            <div id="opcoes" class="opcoes">
-                <div onclick="seles1()" id="s1" class="opcao" data-identifier="food-option">
+            <div class="opcoes">
+                <div onclick="selecionarSobremesa(this, 'doce', 's1')" class="opcao doce" data-identifier="food-option">
                     <img src="imagens/pudim 1.png" alt="Pudim">
                     <p class="nome-opcao" data-identifier="food-title">Pudim</p>
                     <p class="descricao">Apenas pudim</p>
-                    <div id="icon-s1" class="icone icon-none">
+                    <div class="icone s1 icon-none">
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                     <span data-identifier="food-price">R$ 7,90</span>
                 </div>
-                <div onclick="seles2()" id="s2" class="opcao" data-identifier="food-option">
+                <div onclick="selecionarSobremesa(this, 'doce', 's2')" class="opcao doce" data-identifier="food-option">
                     <img src="imagens/pudim 1.png" alt="Pudim">
                     <p class="nome-opcao" data-identifier="food-title">Pudim</p>
                     <p class="descricao">Apenas pudim</p>
-                    <div id="icon-s2" class="icone icon-none">
+                    <div class="icone s2 icon-none">
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                     <span data-identifier="food-price">R$ 8,90</span>
                 </div>
-                <div onclick="seles3()" id="s3" class="opcao" data-identifier="food-option">
+                <div onclick="selecionarSobremesa(this, 'doce', 's3')" class="opcao doce" data-identifier="food-option">
                     <img src="imagens/pudim 1.png" alt="Pudim">
                     <p class="nome-opcao" data-identifier="food-title">Pudim</p>
                     <p class="descricao">Apenas pudim</p>
-                    <div id="icon-s3" class="icone icon-none">
+                    <div class="icone s3 icon-none">
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                     <span data-identifier="food-price">R$ 9,90</span>
                 </div>
-                <div onclick="seles4()" id="s4" class="opcao" data-identifier="food-option">
+                <div onclick="selecionarSobremesa(this, 'doce', 's4')" class="opcao doce" data-identifier="food-option">
                     <img src="imagens/pudim 1.png" alt="Pudim">
                     <p class="nome-opcao" data-identifier="food-title">Pudim</p>
                     <p class="descricao">Apenas pudim</p>
-                    <div id="icon-s4" class="icone icon-none">
+                    <div class="icone s4 icon-none">
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                     <span data-identifier="food-price">R$ 10,90</span>
@@ -145,15 +145,15 @@
         </div>
     </main>
     <footer>
-        <div id="pedido-aberto" class="aberto">
+        <div class="aberto">
             <p class="pedido-aberto">Selecione os 3 itens <br>para fechar o pedido</p>
         </div>
-        <div id="pedido-fechado" onclick="confirmarPedido()" class="fechado icon-none">
+        <div onclick="confirmarPedido()" class="fechado icon-none">
             <p class="pedido-completo">Fechar pedido</p>
         </div>
     </footer>
 </div>
-<div id="confirmar-pedido" class="fundo-apagado icon-none">
+<div class="fundo-apagado icon-none">
     <div data-identifier="confirmation-dialog" class="confirmar-pedido">
         <p class="confirme">Confirme seu pedido</p>
         <div class="confirme-comida">

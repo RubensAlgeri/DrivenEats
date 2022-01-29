@@ -11,234 +11,87 @@ let valorComida = 0;
 let valorBebida = 0;
 let valorSobremesa = 0;
 
-function selef1(){
+function selecionarComida(botao, classeOpcao, classeIcone){
     selecionouComida = true;
-    comida = "Frango Yin Yang";
-    precoComida = " 14,90";
-    valorComida = 14.90;
+    comida = document.querySelector(`.${classeOpcao} .nome-opcao`).innerText;
+    precoComida = document.querySelector(`.${classeOpcao} span`).innerText;
+    let precoComida1 = precoComida.replace("R$","");
+    let precoComida2 = precoComida1.replace(",",".");
+    valorComida = parseFloat(precoComida2);
 
-
-    document.getElementById("f1").classList.add("borda-verde");
-    document.getElementById("f2").classList.remove("borda-verde");
-    document.getElementById("f3").classList.remove("borda-verde");
-    document.getElementById("f4").classList.remove("borda-verde");
-
-    document.getElementById("icon-f1").classList.remove("icon-none");
-    document.getElementById("icon-f2").classList.add("icon-none");
-    document.getElementById("icon-f3").classList.add("icon-none");
-    document.getElementById("icon-f4").classList.add("icon-none");
-
-    revisarPedido();
-}
-function selef2(){
-    selecionouComida = true;
-    comida = "Frango Yin Yang";
-    precoComida = " 15,90";
-    valorComida = 15.90;
-
-    document.getElementById("f1").classList.remove("borda-verde");
-    document.getElementById("f2").classList.add("borda-verde");
-    document.getElementById("f3").classList.remove("borda-verde");
-    document.getElementById("f4").classList.remove("borda-verde");
-
-    document.getElementById("icon-f1").classList.add("icon-none");
-    document.getElementById("icon-f2").classList.remove("icon-none");
-    document.getElementById("icon-f3").classList.add("icon-none");
-    document.getElementById("icon-f4").classList.add("icon-none");
-
-    revisarPedido();
-}
-function selef3(){
-    selecionouComida = true;
-    comida = "Frango Yin Yang";
-    precoComida = " 16,90";
-    valorComida = 16.90;
-
-    document.getElementById("f1").classList.remove("borda-verde");
-    document.getElementById("f2").classList.remove("borda-verde");
-    document.getElementById("f3").classList.add("borda-verde");
-    document.getElementById("f4").classList.remove("borda-verde");
-
-    document.getElementById("icon-f1").classList.add("icon-none");
-    document.getElementById("icon-f2").classList.add("icon-none");
-    document.getElementById("icon-f3").classList.remove("icon-none");
-    document.getElementById("icon-f4").classList.add("icon-none");
+const selecionado = document.querySelector(`.${classeOpcao}.borda-verde`);
+    if (selecionado !== null) {
+        selecionado.classList.remove("borda-verde");
+    }
+    const selec = document.querySelector(`.${classeOpcao} .icone:not(.icon-none)`);
+    if (selec !== null) {
+        selec.classList.add("icon-none");
+        
+    }
+    document.querySelector('.' + classeIcone).classList.remove("icon-none");
+    botao.classList.add("borda-verde");
     
     revisarPedido();
 }
-function selef4(){
-    selecionouComida = true;
-    comida = "Frango Yin Yang";
-    precoComida = " 17,90";
-    valorComida = 17.90;
 
-    document.getElementById("f1").classList.remove("borda-verde");
-    document.getElementById("f2").classList.remove("borda-verde");
-    document.getElementById("f3").classList.remove("borda-verde");
-    document.getElementById("f4").classList.add("borda-verde");
-
-    document.getElementById("icon-f1").classList.add("icon-none");
-    document.getElementById("icon-f2").classList.add("icon-none");
-    document.getElementById("icon-f3").classList.add("icon-none");
-    document.getElementById("icon-f4").classList.remove("icon-none");
-    
-    revisarPedido();
-}
-function seleb1(){
+function selecionarBebida(botao, classeOpcao, classeIcone){
     selecionouBebida = true;
-    bebida = "Coquinha Gelada";
-    precoBebida = " 4,90";
-    valorBebida = 4.90;
+    bebida = document.querySelector(`.${classeOpcao} .nome-opcao`).innerText;
+    precoBebida = document.querySelector(`.${classeOpcao} span`).innerText;
+    let precoBebida1 = precoBebida.replace("R$","");
+    let precoBebida2 = precoBebida1.replace(",",".");
+    valorBebida = parseFloat(precoBebida2);
+    const selecionado = document.querySelector(`.${classeOpcao}.borda-verde`);
+    if (selecionado !== null) {
+        selecionado.classList.remove("borda-verde");
+    }
+    const selec = document.querySelector(`.${classeOpcao} .icone:not(.icon-none)`);
+    if (selec !== null) {
+        selec.classList.add("icon-none");
+    }
 
-    document.getElementById("b1").classList.add("borda-verde");
-    document.getElementById("b2").classList.remove("borda-verde");
-    document.getElementById("b3").classList.remove("borda-verde");
-    document.getElementById("b4").classList.remove("borda-verde");
+    document.querySelector('.' + classeIcone).classList.remove("icon-none");
+    botao.classList.add("borda-verde");
 
-    document.getElementById("icon-b1").classList.remove("icon-none");
-    document.getElementById("icon-b2").classList.add("icon-none");
-    document.getElementById("icon-b3").classList.add("icon-none");
-    document.getElementById("icon-b4").classList.add("icon-none");
-    
     revisarPedido();
 }
-function seleb2(){
-    selecionouBebida = true;
-    bebida = "Coquinha Gelada";
-    precoBebida = " 3,90";
-    valorBebida = 3.90;
 
-    document.getElementById("b1").classList.remove("borda-verde");
-    document.getElementById("b2").classList.add("borda-verde");
-    document.getElementById("b3").classList.remove("borda-verde");
-    document.getElementById("b4").classList.remove("borda-verde");
-
-    document.getElementById("icon-b1").classList.add("icon-none");
-    document.getElementById("icon-b2").classList.remove("icon-none");
-    document.getElementById("icon-b3").classList.add("icon-none");
-    document.getElementById("icon-b4").classList.add("icon-none");
-    
-    revisarPedido();
-}
-function seleb3(){
-    selecionouBebida = true;
-    bebida = "Coquinha Gelada";
-    precoBebida = " 5,90";
-    valorBebida = 5.90;
-
-    document.getElementById("b1").classList.remove("borda-verde");
-    document.getElementById("b2").classList.remove("borda-verde");
-    document.getElementById("b3").classList.add("borda-verde");
-    document.getElementById("b4").classList.remove("borda-verde");
-
-    document.getElementById("icon-b1").classList.add("icon-none");
-    document.getElementById("icon-b2").classList.add("icon-none");
-    document.getElementById("icon-b3").classList.remove("icon-none");
-    document.getElementById("icon-b4").classList.add("icon-none");
-    
-    revisarPedido();
-}
-function seleb4(){
-    selecionouBebida = true;
-    bebida = "Coquinha Gelada";
-    precoBebida = " 2,90";
-    valorBebida = 2.90;
-
-    document.getElementById("b1").classList.remove("borda-verde");
-    document.getElementById("b2").classList.remove("borda-verde");
-    document.getElementById("b3").classList.remove("borda-verde");
-    document.getElementById("b4").classList.add("borda-verde");
-
-    document.getElementById("icon-b1").classList.add("icon-none");
-    document.getElementById("icon-b2").classList.add("icon-none");
-    document.getElementById("icon-b3").classList.add("icon-none");
-    document.getElementById("icon-b4").classList.remove("icon-none");
-    
-    revisarPedido();
-}
-function seles1(){
+function selecionarSobremesa(botao, classeOpcao, classeIcone){
     selecionouSobremesa = true;
-    sobremesa = "Pudim";
-    precoSobremesa = " 7,90";
-    valorSobremesa = 7.90;
+    sobremesa = document.querySelector(`.${classeOpcao} .nome-opcao`).innerText;
+    precoSobremesa = document.querySelector(`.${classeOpcao} span`).innerText;
+    let precoSobremesa1 = precoSobremesa.replace("R$","");
+    let precoSobremesa2 = precoSobremesa1.replace(",",".");
+    valorSobremesa = parseFloat(precoSobremesa2);
 
-    document.getElementById("s1").classList.add("borda-verde");
-    document.getElementById("s2").classList.remove("borda-verde");
-    document.getElementById("s3").classList.remove("borda-verde");
-    document.getElementById("s4").classList.remove("borda-verde");
-
-    document.getElementById("icon-s1").classList.remove("icon-none");
-    document.getElementById("icon-s2").classList.add("icon-none");
-    document.getElementById("icon-s3").classList.add("icon-none");
-    document.getElementById("icon-s4").classList.add("icon-none");
+    const selecionado = document.querySelector(`.${classeOpcao}.borda-verde`);
+    if (selecionado !== null) {
+        selecionado.classList.remove("borda-verde");
+    }
+    const selec = document.querySelector(`.${classeOpcao} .icone:not(.icon-none)`);
+    if (selec !== null) {
+        selec.classList.add("icon-none");
+    }
     
+    document.querySelector('.' + classeIcone).classList.remove("icon-none");
+    botao.classList.add("borda-verde");
+
     revisarPedido();
 }
-function seles2(){
-    selecionouSobremesa = true;
-    sobremesa = "Pudim";
-    precoSobremesa = " 8,90";
-    valorSobremesa = 8.90;
+function deselecionarOpcao(){
 
-    document.getElementById("s1").classList.remove("borda-verde");
-    document.getElementById("s2").classList.add("borda-verde");
-    document.getElementById("s3").classList.remove("borda-verde");
-    document.getElementById("s4").classList.remove("borda-verde");
-
-    document.getElementById("icon-s1").classList.add("icon-none");
-    document.getElementById("icon-s2").classList.remove("icon-none");
-    document.getElementById("icon-s3").classList.add("icon-none");
-    document.getElementById("icon-s4").classList.add("icon-none");
-    
-    revisarPedido();
-}
-function seles3(){
-    selecionouSobremesa = true;
-    sobremesa = "Pudim";
-    precoSobremesa = " 9,90";
-    valorSobremesa = 9.90;
-
-    document.getElementById("s1").classList.remove("borda-verde");
-    document.getElementById("s2").classList.remove("borda-verde");
-    document.getElementById("s3").classList.add("borda-verde");
-    document.getElementById("s4").classList.remove("borda-verde");
-
-    document.getElementById("icon-s1").classList.add("icon-none");
-    document.getElementById("icon-s2").classList.add("icon-none");
-    document.getElementById("icon-s3").classList.remove("icon-none");
-    document.getElementById("icon-s4").classList.add("icon-none");
-    
-    revisarPedido();
-}
-function seles4(){
-    selecionouSobremesa = true;
-    sobremesa = "Pudim";
-    precoSobremesa = " 10,90";
-    valorSobremesa = 10.90;
-
-    document.getElementById("s1").classList.remove("borda-verde");
-    document.getElementById("s2").classList.remove("borda-verde");
-    document.getElementById("s3").classList.remove("borda-verde");
-    document.getElementById("s4").classList.add("borda-verde");
-
-    document.getElementById("icon-s1").classList.add("icon-none");
-    document.getElementById("icon-s2").classList.add("icon-none");
-    document.getElementById("icon-s3").classList.add("icon-none");
-    document.getElementById("icon-s4").classList.remove("icon-none");
-
-    revisarPedido();
 }
 
 function revisarPedido() {
     if (selecionouComida === true && selecionouBebida === true && selecionouSobremesa === true) {
-        document.getElementById("pedido-aberto").classList.add("icon-none");
-        document.getElementById("pedido-fechado").classList.remove("icon-none");
+        document.querySelector(".aberto").classList.add("icon-none");
+        document.querySelector(".fechado").classList.remove("icon-none");
     }
 }
 function confirmarPedido(){
     let resultado = `R$ ${(valorComida+valorBebida+valorSobremesa).toFixed(2)}`;
     resultado = resultado.replace("." , ",");
-    document.getElementById("confirmar-pedido").classList.remove("icon-none");
+    document.querySelector(".fundo-apagado").classList.remove("icon-none");
     document.querySelector("strong.nome-comida").innerHTML = comida;
     document.querySelector("strong.preco-comida").innerHTML = precoComida;
     document.querySelector("strong.nome-bebida").innerHTML = bebida;
@@ -252,11 +105,22 @@ function finalizarPedido() {
     let enderecoCliente = prompt("Seu endereço por favor.");
     // let mensagem = "Olá, gostaria de fazer o pedido:\n- Prato: " + comida + "\n- Bebida: " + bebida + "\n- Sobremesa: " + sobremesa + "\nTotal: " + resultado + "\n \nNome: " + nomeCliente + "\nEndereço: " + enderecoCliente;
     // let mensage = encodeURIComponent(mensagem);
-    let mensage = `Olá!`;
+    
+    
+//     Olá, gostaria de fazer o pedido:
+// - Prato: ${prato1}
+// - Bebida: ${prato2}
+// - Sobremesa: ${prato3}
+// Total: R$ ${total}
+                
+// Nome: ${nomeUsuario}
+// Endereço: ${enderecoUsuario}
+// let mensagemWhatsapp = https://wa.me/${numeroCelular}?text=${mensagemTransformada};
+//     let mensage = `Olá!`;
 
     const url = "https://wa.me/5521999999999?text=" + mensage;
     window.open(url);
 }
 function cancelar(){
-    document.getElementById("confirmar-pedido").classList.add("icon-none");
+    document.querySelector(".fundo-apagado").classList.add("icon-none");
 }
