@@ -10,13 +10,13 @@ let precoSobremesa = '';
 let valorComida = 0;
 let valorBebida = 0;
 let valorSobremesa = 0;
+let total = '';
 
-function selecionarComida(botao, classeOpcao, classeIcone){
+function selecionarComida(botao, classeOpcao, classeIcone, classeNomeOpcao, classePreco){
     selecionouComida = true;
-    comida = document.querySelector(`.${classeOpcao} .nome-opcao`).innerText;
-    precoComida = document.querySelector(`.${classeOpcao} span`).innerText;
-    let precoComida1 = precoComida.replace("R$","");
-    let precoComida2 = precoComida1.replace(",",".");
+    comida = document.querySelector(`.${classeOpcao} .${classeNomeOpcao}`).innerText;
+    precoComida = document.querySelector(`.${classeOpcao} .${classePreco}`).innerText.replace("R$","");
+    let precoComida2 = precoComida.replace(",",".");
     valorComida = parseFloat(precoComida2);
 
     deselecionarOpcao(classeOpcao);
@@ -27,12 +27,11 @@ function selecionarComida(botao, classeOpcao, classeIcone){
     revisarPedido();
 }
 
-function selecionarBebida(botao, classeOpcao, classeIcone){
+function selecionarBebida(botao, classeOpcao, classeIcone, classeNomeOpcao, classePreco){
     selecionouBebida = true;
-    bebida = document.querySelector(`.${classeOpcao} .nome-opcao`).innerText;
-    precoBebida = document.querySelector(`.${classeOpcao} span`).innerText;
-    let precoBebida1 = precoBebida.replace("R$","");
-    let precoBebida2 = precoBebida1.replace(",",".");
+    bebida = document.querySelector(`.${classeOpcao} .${classeNomeOpcao}`).innerText;
+    precoBebida = document.querySelector(`.${classeOpcao} .${classePreco}`).innerText.replace("R$","");
+    let precoBebida2 = precoBebida.replace(",",".");
     valorBebida = parseFloat(precoBebida2);
 
     deselecionarOpcao(classeOpcao);
@@ -43,12 +42,11 @@ function selecionarBebida(botao, classeOpcao, classeIcone){
     revisarPedido();
 }
 
-function selecionarSobremesa(botao, classeOpcao, classeIcone){
+function selecionarSobremesa(botao, classeOpcao, classeIcone, classeNomeOpcao, classePreco){
     selecionouSobremesa = true;
-    sobremesa = document.querySelector(`.${classeOpcao} .nome-opcao`).innerText;
-    precoSobremesa = document.querySelector(`.${classeOpcao} span`).innerText;
-    let precoSobremesa1 = precoSobremesa.replace("R$","");
-    let precoSobremesa2 = precoSobremesa1.replace(",",".");
+    sobremesa = document.querySelector(`.${classeOpcao} .${classeNomeOpcao}`).innerText;
+    precoSobremesa = document.querySelector(`.${classeOpcao} .${classePreco}`).innerText.replace("R$","");
+    let precoSobremesa2 = precoSobremesa.replace(",",".");
     valorSobremesa = parseFloat(precoSobremesa2);
 
     deselecionarOpcao(classeOpcao);
@@ -76,8 +74,8 @@ function revisarPedido() {
     }
 }
 function confirmarPedido(){
-    let resultado = `R$ ${(valorComida+valorBebida+valorSobremesa).toFixed(2)}`;
-    resultado = resultado.replace("." , ",");
+    total = `R$ ${(valorComida+valorBebida+valorSobremesa).toFixed(2)}`;
+    let resultado = total.replace("." , ",");
     document.querySelector(".fundo-apagado").classList.remove("icon-none");
     document.querySelector("strong.nome-comida").innerHTML = comida;
     document.querySelector("strong.preco-comida").innerHTML = precoComida;
@@ -90,22 +88,19 @@ function confirmarPedido(){
 function finalizarPedido() {
     let nomeCliente = prompt("Seu Nome por favor.");
     let enderecoCliente = prompt("Seu endereço por favor.");
-    // let mensagem = "Olá, gostaria de fazer o pedido:\n- Prato: " + comida + "\n- Bebida: " + bebida + "\n- Sobremesa: " + sobremesa + "\nTotal: " + resultado + "\n \nNome: " + nomeCliente + "\nEndereço: " + enderecoCliente;
-    // let mensage = encodeURIComponent(mensagem);
-    
-    
-//     Olá, gostaria de fazer o pedido:
-// - Prato: ${prato1}
-// - Bebida: ${prato2}
-// - Sobremesa: ${prato3}
-// Total: R$ ${total}
-                
-// Nome: ${nomeUsuario}
-// Endereço: ${enderecoUsuario}
-// let mensagemWhatsapp = https://wa.me/${numeroCelular}?text=${mensagemTransformada};
-//     let mensage = `Olá!`;
 
-    const url = "https://wa.me/5521999999999?text=" + mensage;
+    let mensagem =
+    `Olá, gostaria de fazer o pedido:
+    - Prato: ${comida}
+    - Bebida: ${bebida}
+    - Sobremesa: ${sobremesa}
+    Total: ${total}
+    
+    Nome: ${nomeCliente}
+    Endereço: ${enderecoCliente}`;
+
+    let url = "https://wa.me/5521999999999?text=" + encodeURIComponent(mensagem);
+
     window.open(url);
 }
 function cancelar(){
