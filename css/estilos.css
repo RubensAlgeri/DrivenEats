@@ -19,10 +19,13 @@ header{
 h1{
     font-family: 'Righteous', cursive;
     font-size: 44px;
+    Line-height: 54.63px;
+    letter-spacing: -1.2%;
 }
 h2{
     line-height: 21px;
     font-size: 18px;
+    Line-height: 21.09px;
 }
 main{
     margin-left: 19px
@@ -134,7 +137,7 @@ footer div{
     position: relative;
     display: flex;
     margin: auto;
-    top: 32.7%;
+    top: 30.7%;
     z-index: 3;
     height: 353px;
     width: 91%;
@@ -202,7 +205,6 @@ h5{
     position: absolute;
     left: 26px;
     font-size: 22px;
-
     letter-spacing: 0.018em;
     color: #ffffff;
 }
