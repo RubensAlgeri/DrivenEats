@@ -199,16 +199,6 @@ strong{
     letter-spacing: 0.018em;
     color: #ffffff;
 }
-
-h5{
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    left: 26px;
-    font-size: 22px;
-    letter-spacing: 0.018em;
-    color: #ffffff;
-}
 .pedir{
     position: absolute;
     left: calc(50% - 87.25%/2 + 0.5px);
